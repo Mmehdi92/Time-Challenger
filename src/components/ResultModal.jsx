@@ -32,9 +32,12 @@ const ResultModal = forwardRef(function ResultModal({ targetTime, timeRemaing, o
             <p>
                 You stopped the timer with <strong> {formattedRemainingTime} seconds left.</strong>
             </p>
-            <button onClick={onClose}>
-                Close
-            </button>
+       
+                <button onClick={onClose}>
+                    Close
+                </button>
+     
+
         </dialog>, document.getElementById('modal')
     )
 })
