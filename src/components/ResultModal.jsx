@@ -17,7 +17,10 @@ const ResultModal = forwardRef(function ResultModal({ targetTime, timeRemaing, o
         }
     });
 
-
+    function onClose() {
+        dialog.current.close()
+        onReset()
+    }
 
     return createPortal(
         <dialog ref={dialog} className="result-modal" onClose={onReset}  >
@@ -29,9 +32,9 @@ const ResultModal = forwardRef(function ResultModal({ targetTime, timeRemaing, o
             <p>
                 You stopped the timer with <strong> {formattedRemainingTime} seconds left.</strong>
             </p>
-            <form action="dialog" onSubmit={onReset}>
-                <button >Close</button>
-            </form>
+            <button onClick={onClose}>
+                Close
+            </button>
         </dialog>, document.getElementById('modal')
     )
 })
