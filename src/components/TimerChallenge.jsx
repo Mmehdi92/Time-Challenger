@@ -6,7 +6,7 @@ export default function TimerChallenge({ title, targetTime }) {
     const dialog = useRef()
 
     const [remainingTime, setRemainingTime] = useState(targetTime * 1000)
-    console.log(remainingTime)
+    // console.log(remainingTime)
     const timerIsActive = remainingTime > 0 && remainingTime < targetTime * 1000;
 
     if (remainingTime <= 0) {
